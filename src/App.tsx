@@ -27,7 +27,7 @@ export const App = () => {
               ...alignCenter,
               justifyContent: "center",
               zIndex: "100",
-              background: "#070707",
+              background: "rgba(7, 7, 7, 0.6)"
             }}
           >
             <VStack>
@@ -37,7 +37,7 @@ export const App = () => {
           <ParallaxLayer
             sticky={{ start: 0.9, end: 1.7 }}
             speed={1}
-            style={{ ...alignCenter, justifyContent: "center", zIndex: "1" }}
+            style={{ ...alignCenter, justifyContent: "center", zIndex: "1"}}
           >
 
             <VStack>

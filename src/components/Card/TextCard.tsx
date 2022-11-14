@@ -22,7 +22,7 @@ export default function TextBox({ title, paragraph, gradient }: TextBoxProps) {
         </Text>
         <Spacer></Spacer>
         <Box width={"320px"}>
-          <Text align={"center"}>{paragraph}</Text>
+          <Text fontWeight={600} align={"center"}>{paragraph}</Text>
         </Box>
       </VStack>
     </>
