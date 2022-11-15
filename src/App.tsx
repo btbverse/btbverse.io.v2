@@ -79,7 +79,7 @@ export const App = () => {
             style={{ ...alignCenter, justifyContent: "center", zIndex: "100" }}
           >
             <TextCard
-              title="Unleash the worlds creativity"
+              title="Unleash the world's creativity"
               paragraph="We strive to become the go-to partner for merchants, creators, and any party in the internet that want to directly interact and collaborate, breaking free from the rigid, unpredictable, and centralized platforms web2 has created"
               gradient={{ from: "#B8D0EB", to: "#B9FAF8" }}
             />
