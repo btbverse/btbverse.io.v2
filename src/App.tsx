@@ -3,23 +3,32 @@ import {
   Box,
   Button,
   ChakraProvider,
+  Collapse,
+  Fade,
+  Icon,
   Link,
   Spacer,
+  useDisclosure,
   VStack,
 } from "@chakra-ui/react";
 import theme from "./styles/theme";
 import TextCard from "./components/Card/TextCard";
 import { Circles } from "./components/Circles/Circles";
 import { Background } from "./components/Background/Background";
+import { Team } from "./components/Team/Team";
+import { Terms } from "./components/Terms";
+import { motion } from "framer-motion";
+import { ChevronDownIcon } from "@chakra-ui/icons";
 
 export const App = () => {
   const alignCenter = { display: "flex", alignItems: "center" };
+  const { isOpen, onToggle } = useDisclosure();
 
   return (
     <ChakraProvider theme={theme}>
       <Box scale={10} height={"100vh"} zIndex="100">
         <Parallax pages={6}>
-        <Background />
+          <Background />
           <ParallaxLayer
             sticky={{ start: 0, end: 0.1 }}
             speed={1}
@@ -27,19 +36,23 @@ export const App = () => {
               ...alignCenter,
               justifyContent: "center",
               zIndex: "100",
-              background: "rgba(7, 7, 7, 0.6)"
             }}
           >
             <VStack>
               <Circles></Circles>
+              <motion.div
+                animate={{ y: [20,-5,20] }}
+                transition={{ ease: "linear", bounce: 100, duration: 1, repeat: Infinity}}
+              >
+                <Icon as={ChevronDownIcon} boxSize={12} color="white" />
+              </motion.div>
             </VStack>
           </ParallaxLayer>
           <ParallaxLayer
             sticky={{ start: 0.9, end: 1.7 }}
             speed={1}
-            style={{ ...alignCenter, justifyContent: "center", zIndex: "1"}}
+            style={{ ...alignCenter, justifyContent: "center", zIndex: "1" }}
           >
-
             <VStack>
               <TextCard
                 title="Merchants"
@@ -89,31 +102,31 @@ export const App = () => {
             speed={1}
             style={{ ...alignCenter, justifyContent: "center", zIndex: "100" }}
           >
-            <VStack>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <Button width={"100%"} size={"lg"} variant="gradient-outline">
-                join waitlist
-              </Button>
-              <Spacer />
-              <br></br>
-              <Button width={"100%"} size={"lg"} variant="purple-outline">
-                meet the team
-              </Button>
-              <Spacer />
-              <br></br>
-              <Link
+            <VStack mt={80}>
+              <motion.a
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
                 target={"_blank"}
-                href="https://google.de"
-                mt={"800px"}
-                color={"grey"}
+                rel="noreferrer"
+                href="https://forms.gle/1qwGQJmV6vbRFHxg7"
               >
-                Imprint and privacy
-              </Link>
+                <Button width={"100%"} size={"lg"} variant="gradient-outline">
+                  join waitlist
+                </Button>
+              </motion.a>
+              <Spacer />
+              <br></br>
+              <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+                <Button onClick={onToggle} size={"lg"} variant="purple-outline">
+                  meet the team
+                </Button>
+              </motion.div>
+              <Collapse in={isOpen} animateOpacity>
+                <Team isOpen={isOpen} />
+              </Collapse>
+              <Spacer />
+              <br></br>
+              <Terms></Terms>
             </VStack>
           </ParallaxLayer>
         </Parallax>

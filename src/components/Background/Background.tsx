@@ -25,8 +25,8 @@ export const Background = () => {
           enable: true,
           zIndex: 1,
         },
-        detectRetina: true,
-        fpsLimit: 60,
+        detectRetina: false,
+        fpsLimit: 120,
         interactivity: {
           events: {
             onHover: {
@@ -34,8 +34,8 @@ export const Background = () => {
               mode: "bubble",
               parallax: {
                 enable: false,
-                force: 3,
-                smooth: 10,
+                force: 50,
+                smooth: 500,
               },
             },
           },
@@ -43,21 +43,21 @@ export const Background = () => {
             bubble: {
               distance: 140,
               duration: 100,
-              opacity: 19,
+              opacity: 1,
               size: 10,
               speed: 2,
             },
             connect: {
-              distance: 300,
+              distance: 700,
               lineLinked: {
-                opacity: 1.9,
+                opacity: 1,
               },
               radius: 160,
             },
             grab: {
               distance: 400,
               lineLinked: {
-                opacity: 1,
+                opacity: 0.5,
               },
             },
             push: {
@@ -85,9 +85,9 @@ export const Background = () => {
             blink: false,
             color: "random",
             consent: false,
-            distance: 60,
+            distance: 100,
             enable: true,
-            opacity: 20,
+            opacity: 0.8,
             width: 3,
           },
           move: {
@@ -117,12 +117,12 @@ export const Background = () => {
           opacity: {
             animation: {
               enable: false,
-              minimumValue: 0.05,
+              minimumValue: 0.1,
               speed: 2,
               sync: false,
             },
             random: false,
-            value: 0.4,
+            value: 0.2,
           },
           shape: {
             type: "circle",
@@ -141,7 +141,7 @@ export const Background = () => {
         polygon: {
           draw: {
             enable: true,
-            lineColor: "rgba(255,255,255,0.2)",
+            lineColor: "rgba(255,255,255,0.1)",
             lineWidth: 2,
           },
           enable: false,
@@ -162,6 +162,7 @@ export const Background = () => {
           position: "10% 10%",
           repeat: "no-repeat",
           size: "cover",
+          color: "#040404"
         },
       }}
     />
