@@ -20,7 +20,7 @@ export const Team = ({ isOpen }: TeamProps) => {
               <Image width={"44"} src={flo} />
 
               <Text fontWeight={800}>Florian</Text>
-              <Text fontWeight={150}>Sales</Text>
+              <Text fontWeight={150}>Product</Text>
             </VStack>
           </Link>
         <Link
