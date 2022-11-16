@@ -54,7 +54,7 @@ export const App = () => {
             <VStack>
               <TextCard
                 title="Merchants"
-                paragraph="We want to create an NFT-based loyalty and collaboration suite for merchants that  want to strengthen their user base and align incentives for users with factors that increase their customer lifeteime value"
+                paragraph="We want to create an NFT-based loyalty and collaboration suite for merchants that  want to strengthen their user base and align incentives for users with factors that increase their customer lifetime value"
                 gradient={{ from: "#6F2DBD", to: "#A663CC " }}
               />
             </VStack>
