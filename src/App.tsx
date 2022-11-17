@@ -54,7 +54,7 @@ export const App = () => {
             <VStack>
               <TextCard
                 title="Merchants"
-                paragraph="We want to create an NFT-based loyalty and collaboration suite for merchants that  want to strengthen their user base and align incentives for users with factors that increase their customer lifetime value"
+                paragraph="We want to create an NFT-based loyalty and collaboration suite for merchants that want to strengthen their user base and align incentives for users with factors that increase their customer lifetime value"
                 gradient={{ from: "#6F2DBD", to: "#A663CC " }}
               />
             </VStack>
@@ -67,7 +67,7 @@ export const App = () => {
           >
             <TextCard
               title="Creators"
-              paragraph="We strive to establish a more direct and more platform independent way for creators to  interact with their community and improve monetization"
+              paragraph="We strive to establish a more direct and more platform independent way for creators to interact with their community and improve monetization"
               gradient={{ from: "#A663CC", to: "#B298DC" }}
             />
           </ParallaxLayer>
@@ -79,7 +79,7 @@ export const App = () => {
           >
             <TextCard
               title="Users"
-              paragraph="Enabling next-generation collaborations between merchants and creators, we believe we can transorm how users travel through the internet and create experiences beyond our current imagination"
+              paragraph="Enabling next-generation collaborations between merchants and creators, we believe we can transform how users travel through the internet and create experiences beyond our current imagination"
               gradient={{ from: "#B298DC", to: "#B8D0EB" }}
             />
           </ParallaxLayer>
@@ -91,7 +91,7 @@ export const App = () => {
           >
             <TextCard
               title="Unleash the world's creativity"
-              paragraph="We strive to become the go-to partner for merchants, creators, and any party in the internet that want to directly interact and collaborate, breaking free from the rigid, unpredictable, and centralized platforms web2 has created"
+              paragraph="We strive to become the go-to partner for merchants, creators, and any party on the internet that wants to directly interact and collaborate, breaking free from the rigid, unpredictable, and centralized platforms web2 has created"
               gradient={{ from: "#B8D0EB", to: "#B9FAF8" }}
             />
           </ParallaxLayer>
