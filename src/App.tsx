@@ -108,7 +108,7 @@ export const App = () => {
                 rel="noreferrer"
                 href="https://forms.gle/1qwGQJmV6vbRFHxg7"
               >
-                <Button width={"100%"} size={"lg"} variant="gradient-outline">
+                <Button width={"150%"} size={"lg"} variant="gradient-outline">
                   join waitlist
                 </Button>
               </motion.a>
