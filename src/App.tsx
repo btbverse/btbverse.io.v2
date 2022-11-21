@@ -39,8 +39,13 @@ export const App = () => {
             <VStack>
               <Circles></Circles>
               <motion.div
-                animate={{ y: [20,-5,20] }}
-                transition={{ ease: "linear", bounce: 100, duration: 1, repeat: Infinity}}
+                animate={{ y: [20, -5, 20] }}
+                transition={{
+                  ease: "linear",
+                  bounce: 100,
+                  duration: 1,
+                  repeat: Infinity,
+                }}
               >
                 <Icon as={ChevronDownIcon} boxSize={12} color="white" />
               </motion.div>
@@ -108,14 +113,19 @@ export const App = () => {
                 rel="noreferrer"
                 href="https://forms.gle/1qwGQJmV6vbRFHxg7"
               >
-                <Button width={"100%"} size={"lg"} variant="gradient-outline">
+                <Button width={"200px"} size={"lg"} variant="gradient-outline">
                   join waitlist
                 </Button>
               </motion.a>
               <Spacer />
               <br></br>
               <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-                <Button onClick={onToggle} size={"lg"} variant="purple-outline">
+                <Button
+                  width={"200px"}
+                  onClick={onToggle}
+                  size={"lg"}
+                  variant="purple-outline"
+                >
                   meet the team
                 </Button>
               </motion.div>
