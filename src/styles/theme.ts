@@ -1,4 +1,9 @@
-import { extendTheme, type ThemeConfig } from "@chakra-ui/react";
+import {
+  extendTheme,
+  StyleFunctionProps,
+  type ThemeConfig,
+} from "@chakra-ui/react";
+import { mode } from "@chakra-ui/theme-tools";
 
 // 2. Add your color mode config
 const config: ThemeConfig = {
@@ -36,10 +41,17 @@ const theme = extendTheme({
           _hover: {
             borderRadius: "100rem",
             border: "solid 4px #A663CD",
-          }
+          },
         },
       },
     },
+  },
+  styles: {
+    global: (props: StyleFunctionProps) => ({
+      body: {
+        bg: mode("black", "black")(props),
+      },
+    }),
   },
 });
 
