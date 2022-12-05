@@ -20,6 +20,7 @@ root.render(
         <Route path="/" element={<App />}></Route>
         <Route path="/blog" element={<BlogList />} />
         <Route path="/blog/:id" element={<BlogPost />} />
+        <Route path="*" element={<App />}></Route>
       </Routes>
     </BrowserRouter>
     <BlogBackground />
