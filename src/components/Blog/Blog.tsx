@@ -43,12 +43,12 @@ export const Blog = ({ blog_id }: AppProps) => {
   const location = useLocation();
 
   useEffect(() => {
-    setTags(location.state.Tags);
+    setTags(location.state?.Tags);
     setLoading(true);
     axios
       .get(page_api + blog_id)
       .then(function (response) {
-        setBlogPost((blogPost.block = response.data));
+        blogPost.block = response.data;
         setLoading(false);
       })
       .catch(function (error) {
@@ -82,12 +82,12 @@ export const Blog = ({ blog_id }: AppProps) => {
           Blogpost
         </Heading>
         <HStack>
-          {tags.map((tag) => {
+          {tags?.map((tag) => {
             return <Badge key={tag}>{tag}</Badge>;
           })}
           <Spacer />
           <Text fontWeight={200}>
-            {location.state.Author} • {location.state.Date}
+            {location.state?.Author} • {location.state?.Date}
           </Text>
         </HStack>
 
@@ -100,7 +100,7 @@ export const Blog = ({ blog_id }: AppProps) => {
               <NotionRenderer
                 fullPage={true}
                 darkMode={true}
-                recordMap={recordMap}
+                recordMap={blogPost}
                 components={{
                   Code,
                   Collection,
