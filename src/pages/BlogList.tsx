@@ -12,6 +12,7 @@ import {
   Spinner,
   HStack,
   Badge,
+  Box,
 } from "@chakra-ui/react";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -82,7 +83,7 @@ export default function BlogList() {
                 </Text>
               )}
 
-              {length(blogList) > 0 ? (
+              {length(blogList) > 1 ? (
                 <HStack>
                   {tags.map((tag: string) => {
                     return (
@@ -131,16 +132,18 @@ export default function BlogList() {
                   item.Description.match(new RegExp(search, "i"))
                 ) {
                   return (
-                    <BlogCard
-                      id={item.id}
-                      Name={item.Name}
-                      Description={item.Description}
-                      Status={item.Status}
-                      Tags={item.Tags}
-                      Image={item.Image}
-                      Author={item.Author}
-                      Date={item.Date}
-                    />
+                    <Box hidden={item.Status === "hidden"}>
+                      <BlogCard
+                        id={item.id}
+                        Name={item.Name}
+                        Description={item.Description}
+                        Status={item.Status}
+                        Tags={item.Tags}
+                        Image={item.Image}
+                        Author={item.Author}
+                        Date={item.Date}
+                      />
+                    </Box>
                   );
                 }
               })}

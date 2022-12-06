@@ -87,7 +87,15 @@ export const Blog = ({ blog_id }: AppProps) => {
           })}
           <Spacer />
           <Text fontWeight={200}>
-            {location.state?.Author} • {location.state?.Date}
+            {location.state?.Author}
+            {!tags ? (
+              <Badge mt={3} fontSize={15}>
+                P R E V I E W
+              </Badge>
+            ) : (
+              "•"
+            )}
+            {location.state?.Date}
           </Text>
         </HStack>
 

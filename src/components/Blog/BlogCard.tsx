@@ -38,7 +38,6 @@ export const BlogCard = ({
         background={"#171923"}
         maxW="sm"
         borderRadius={15}
-        hidden={Status === "hidden"}
         as={ReachLink}
         state={{ Name, Tags, Author, Date }}
         to={`/blog/${id}`}

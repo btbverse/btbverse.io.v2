@@ -18,7 +18,7 @@
     --bg-color-2: rgba(135, 131, 120, 0.15);
   
     --select-color-0: rgb(46, 170, 220);
-    --select-color-1: rgba(45, 170, 219, 0.3);
+    --select-color-1: rgba(255, 0, 140, 0.3);
     --select-color-2: #d9eff8;
   
     --notion-red: rgb(224, 62, 62);
@@ -116,7 +116,7 @@
   }
   
   .notion {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.5;
     color: var(--fg-color);
     caret-color: var(--fg-color);
@@ -133,7 +133,7 @@
   }
   
   .notion *::selection {
-    background: var(--select-color-1);
+    background: #ff00e677;
   }
   
   .notion *,
