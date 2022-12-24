@@ -7,7 +7,6 @@ import BlogList from "./pages/BlogList";
 import BlogPost from "./pages/BlogPost";
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "./styles/theme";
-import { BlogBackground } from "./components/Background/BlogBackground";
 
 const container = document.getElementById("root");
 if (!container) throw new Error("Failed to find the root element");
@@ -23,6 +22,5 @@ root.render(
         <Route path="*" element={<App />}></Route>
       </Routes>
     </BrowserRouter>
-    <BlogBackground />
   </ChakraProvider>
 );

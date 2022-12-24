@@ -15,12 +15,14 @@ import { Circles } from "../Circles/Circles";
 import { Team } from "../Team/Team";
 import { Terms } from "../Terms";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import { BlogBackground } from "../Background/BlogBackground";
 
 export default function ParallaxContent() {
   const alignCenter = { display: "flex", alignItems: "center" };
   const { isOpen, onToggle } = useDisclosure();
   return (
     <Box scale={10} height={"80vh"} zIndex="100">
+      <BlogBackground />
       <Parallax pages={6}>
         <ParallaxLayer
           sticky={{ start: 0, end: 0.1 }}

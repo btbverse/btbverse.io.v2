@@ -20,6 +20,7 @@ import { BlogCard } from "../components/Blog/BlogCard";
 import { NDBFields } from "../components/Blog/NotionDatabaseFields";
 import Header from "../components/Header/Header";
 import { motion } from "framer-motion";
+import { BlogBackground } from "../components/Background/BlogBackground";
 
 export default function BlogList() {
   const [blogList, setBlogList] = useState<NDBFields[]>([]);
@@ -48,6 +49,7 @@ export default function BlogList() {
 
   return (
     <>
+      <BlogBackground />
       <Header />
       <motion.div
         initial="hidden"
